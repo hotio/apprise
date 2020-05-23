@@ -23,4 +23,3 @@ docker run --rm hotio/apprise ...
 | stable   | Stable version                 | [![Build Status](https://cloud.drone.io/api/badges/hotio/docker-apprise/status.svg?ref=refs/heads/stable)](https://cloud.drone.io/hotio/docker-apprise)   | [![GitHub last commit (branch)](https://img.shields.io/github/last-commit/hotio/docker-apprise/stable)](https://github.com/hotio/docker-apprise/commits/stable)     |
 
 You can also find tags that reference a commit or version number.
-
