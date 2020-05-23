@@ -2,7 +2,7 @@ FROM ubuntu@sha256:b58746c8a89938b8c9f5b77de3b8cf1fe78210c696ab03a1442e235eea65d
 LABEL maintainer="hotio"
 
 ARG DEBIAN_FRONTEND="noninteractive"
-
+ENV LANG="C.UTF-8" LC_ALL="C.UTF-8"
 ENTRYPOINT ["apprise"]
 
 ARG APPRISE_VERSION
