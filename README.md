@@ -15,6 +15,8 @@ Just the basics to get the container running:
 docker run --rm hotio/apprise ...
 ```
 
+The default `ENTRYPOINT` is `apprise`.
+
 ## Tags
 
 | Tag      | Description                    | Build Status                                                                                                                                        | Last Updated                                                                                                                                                  |
