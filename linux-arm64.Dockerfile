@@ -1,20 +1,12 @@
-FROM ubuntu@sha256:03e4a3b262fd97281d7290c366cae028e194ae90931bc907991444d026d6392a
+FROM alpine@sha256:ad295e950e71627e9d0d14cdc533f4031d42edae31ab57a841c5b9588eacc280
 LABEL maintainer="hotio"
 
-ARG DEBIAN_FRONTEND="noninteractive"
 ENV LANG="C.UTF-8" LC_ALL="C.UTF-8"
 ENTRYPOINT ["apprise"]
 
 ARG APPRISE_VERSION
 
 # install packages
-RUN apt update && \
-    apt install -y --no-install-recommends --no-install-suggests \
-        python3 \
-        python3-pip python3-setuptools && \
+RUN apk add --no-cache python3 py3-pip && \
     pip3 install --no-cache-dir --upgrade apprise==${APPRISE_VERSION} && \
-# clean up
-    apt purge -y python3-pip python3-setuptools && \
-    apt autoremove -y && \
-    apt clean && \
-    rm -rf /tmp/* /var/lib/apt/lists/* /var/tmp/*
+    apk del --purge py3-pip
