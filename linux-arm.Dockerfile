@@ -7,6 +7,6 @@ ENTRYPOINT ["apprise"]
 ARG APPRISE_VERSION
 
 # install packages
-RUN apk add --no-cache python3 py3-pip && \
+RUN apk add --no-cache python3 py3-six py3-pip && \
     pip3 install --no-cache-dir --upgrade apprise==${APPRISE_VERSION} && \
     apk del --purge py3-pip
