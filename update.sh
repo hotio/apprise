@@ -12,7 +12,7 @@ if [[ ${1} == "checkdigests" ]]; then
 else
     version=$(curl -u "${GITHUB_ACTOR}:${GITHUB_TOKEN}" -fsSL "https://api.github.com/repos/caronc/apprise/releases/latest" | jq -r .tag_name | sed s/v//g)
     [[ -z ${version} ]] && exit 1
-    sed -i "s/{APPRISE_VERSION=[^}]*}/{APPRISE_VERSION=${version}}/g" .github/workflows/build.yml
+    sed -i "s/{APP_VERSION=[^}]*}/{APP_VERSION=${version}}/g" .github/workflows/build.yml
     version="${version}"
     echo "##[set-output name=version;]${version}"
 fi
