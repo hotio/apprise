@@ -1,6 +1,6 @@
 # apprise
 
-<img src="https://raw.githubusercontent.com/hotio/docker-apprise/master/img/apprise.png" alt="Logo" height="130">
+<img src="https://hotio.dev/img/apprise.png" alt="Logo" height="130">
 
 ![Base](https://img.shields.io/badge/base-alpine-blue)
 [![GitHub](https://img.shields.io/badge/source-github-lightgrey)](https://github.com/hotio/docker-apprise)
