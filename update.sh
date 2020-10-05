@@ -17,6 +17,6 @@ elif [[ ${1} == "tests" ]]; then
 else
     version=$(curl -u "${GITHUB_ACTOR}:${GITHUB_TOKEN}" -fsSL "https://api.github.com/repos/caronc/apprise/releases/latest" | jq -r .tag_name | sed s/v//g)
     [[ -z ${version} ]] && exit 1
-    echo '{"version":"'"${version}"'"}' | jq > VERSION.json
+    echo '{"version":"'"${version}"'"}' | jq . > VERSION.json
     echo "##[set-output name=version;]${version}"
 fi
