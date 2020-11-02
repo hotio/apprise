@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [[ ${1} == "checkdigests" ]]; then
-    mkdir ~/.docker && echo '{"experimental": "enabled"}' > ~/.docker/config.json
+    export DOCKER_CLI_EXPERIMENTAL=enabled
     image="alpine"
     tag="3.12"
     manifest=$(docker manifest inspect ${image}:${tag})
