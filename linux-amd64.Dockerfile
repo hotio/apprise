@@ -1,4 +1,4 @@
-FROM alpine@sha256:074d3636ebda6dd446d0d00304c4454f468237fdacf08fb0eeac90bdbfa1bac7
+FROM alpine@sha256:2a8831c57b2e2cb2cda0f3a7c260d3b6c51ad04daea0b3bfc5b55f489ebafd71
 LABEL maintainer="hotio"
 
 ENV LANG="C.UTF-8" LC_ALL="C.UTF-8"
